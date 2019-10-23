@@ -9,7 +9,8 @@
   ],
   "require": {
     "swiftmailer/swiftmailer": "^6.2",
-    "ehime/hello-world": "^1.0"
+    "ehime/hello-world": "^1.0",
+    "twig/twig": "^2.12"
   },
   "autoload": {
     "psr-4": {

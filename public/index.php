@@ -2,19 +2,15 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use HelloWorld\SayHello;
-use App\Wcs\Hello;
+$loader = new Twig\Loader\FilesystemLoader(__DIR__.'/../src/View');
+$twig = new Twig\Environment($loader, [
+    'cache' => false,
+]);
 
-$objet_one = new Hello();
-$objet_two = new SayHello();
-
-
-echo $objet_one->talk() . "<br>";
+$products = ['banane', 'fraise', 'cerise', 'framboise', 'kiwi'];
 
 
-echo $objet_two->world();
-
-
+echo $twig->render('index.html.twig', ['products'=>$products]);
 
 
 
